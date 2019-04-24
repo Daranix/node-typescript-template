@@ -1,0 +1,29 @@
+{
+  "name": "typescript-template",
+  "version": "1.0.0",
+  "description": "Typescript template for create a server",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "npm run serve",
+    "build": "npm run build-ts && npm run tslint",
+    "test": "jasmine --reporter=jasmine-console-reporter --config=jasmine.json",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "build-ts": "tsc",
+    "serve": "node dist/index.js",
+    "debug": "npm run build && npm run watch-debug",
+    "serve-debug": "nodemon --inspect dist/server.js",
+    "clear:all": "rm -rf node_modules/ npm-debug.log"
+  },
+  "author": "Daranix",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^3.3.12",
+    "@types/node": "^11.13.7",
+    "jasmine": "^3.4.0",
+    "jasmine-console-reporter": "^3.1.0",
+    "nodemon": "^1.18.11",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.5"
+  },
+  "types": "dist/index.d.ts"
+}
